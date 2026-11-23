@@ -111,7 +111,7 @@ Visual Novel Detect/
 │   └── TranslationResult.cs                  # Word and sentence translation
 │
 ├── Native/
-│   ├── Win32.cs                              # Win32 P/Invoke declarations
+│   ├── Win32.cs                              # Win32 P/Invoke declarations   
 │   └── DpiHelper.cs                          # Per-monitor DPI scaling, fixed pos & clamping
 │
 ├── Services/
