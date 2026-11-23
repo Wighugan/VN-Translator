@@ -1,0 +1,33 @@
+# Build and Output Folders
+bin/
+obj/
+publish/
+*.exe.WebView2/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.idea/
+
+# Dotnet & NuGet caches
+.dotnet/
+.nuget/
+.appdata/
+nuget.config
+packages/
+*.nupkg
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

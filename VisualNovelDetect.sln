@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualNovelDetect", "VisualNovelDetect.csproj", "{4D5E069E-758E-4A8E-87A3-A656FF1EFA71}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualNovelDetect.Tests", "VisualNovelDetect.Tests\VisualNovelDetect.Tests.csproj", "{B7B0FE41-2679-4B54-9694-8C2655DB6D12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D5E069E-758E-4A8E-87A3-A656FF1EFA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5E069E-758E-4A8E-87A3-A656FF1EFA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5E069E-758E-4A8E-87A3-A656FF1EFA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5E069E-758E-4A8E-87A3-A656FF1EFA71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B0FE41-2679-4B54-9694-8C2655DB6D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B0FE41-2679-4B54-9694-8C2655DB6D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B0FE41-2679-4B54-9694-8C2655DB6D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B0FE41-2679-4B54-9694-8C2655DB6D12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

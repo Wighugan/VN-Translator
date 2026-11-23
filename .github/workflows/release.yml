@@ -1,0 +1,51 @@
+name: Build & Release Visual Novel Detect
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore Dependencies
+        run: dotnet restore VisualNovelDetect.sln
+
+      - name: Run Automated Tests
+        run: dotnet test VisualNovelDetect.sln --no-restore --verbosity normal
+
+      - name: Publish Self-Contained Windows x64 Build
+        run: |
+          dotnet publish VisualNovelDetect.csproj `
+            -c Release `
+            -r win-x64 `
+            --self-contained true `
+            -p:PublishSingleFile=true `
+            -o publish
+
+      - name: Create Zip Archive
+        run: |
+          Compress-Archive -Path publish\* -DestinationPath VisualNovelDetect-Windows-x64.zip
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: VisualNovelDetect-Windows-x64.zip
+          draft: false
+          prerelease: false
+          generate_release_notes: true

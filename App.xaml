@@ -1,0 +1,29 @@
+<Application x:Class="VisualNovelDetect.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:tb="http://www.hardcodet.net/taskbar"
+             xmlns:vm="clr-namespace:VisualNovelDetect.ViewModels"
+             ShutdownMode="OnExplicitShutdown">
+    <Application.Resources>
+        <!-- System Tray TaskbarIcon definition -->
+        <ContextMenu x:Key="TrayContextMenu">
+            <MenuItem Header="Enable Word Lookup"
+                      IsCheckable="True"
+                      IsChecked="{Binding IsLookupEnabled}"
+                      Command="{Binding ToggleLookupEnabledCommand}"/>
+            <MenuItem Header="Lookup Word at Cursor"
+                      Command="{Binding LookupNowCommand}"
+                      FontWeight="Bold"/>
+            <MenuItem Header="Select Dialogue Region..."
+                      Command="{Binding SelectDialogueRegionCommand}"/>
+            <Separator/>
+            <MenuItem Header="Settings..."
+                      Command="{Binding OpenSettingsCommand}"/>
+            <MenuItem Header="Clear Cache"
+                      Command="{Binding ClearCacheCommand}"/>
+            <Separator/>
+            <MenuItem Header="Exit"
+                      Command="{Binding ExitCommand}"/>
+        </ContextMenu>
+    </Application.Resources>
+</Application>
