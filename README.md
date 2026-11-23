@@ -129,5 +129,6 @@ Visual Novel Detect/
 ├── Views/                                    # WPF Views (PopupWindow, SettingsWindow, Region)
 └── VisualNovelDetect.Tests/                  # Automated unit test suite (30 unit tests)
 ```
-#   V N - T r a n s l a t o r  
+#   V N - T r a n s l a t o r 
+ 
  
