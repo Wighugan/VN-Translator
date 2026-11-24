@@ -100,7 +100,7 @@ You can easily compile and package the application yourself using the .NET SDK.
 
 ### 1. Clone Repository
 ```powershell
-git clone https://github.com/your-username/VisualNovelDetect.git
+git clone https://github.com/Wighugan/VN-Translator
 cd "VisualNovelDetect"
 ```
 
